@@ -10,49 +10,58 @@
 <body>
     <style>
         body {
-            min-height: 100vh;
-            display: flex;
-            align-items: flex-end;
+            min-height: 100dvh; /* melhor que 100vh em celulares modernos */
+            margin: 0;
             background-color: var(--background);
             font-family: 'Inter', sans-serif;
         }
+
+        /* Remove o flex do body (não precisa) */
 
         nav {
             position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
-            height: 90px;
-
+            
+            padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+            
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
 
             background-color: var(--card);
             border-top: 1px solid var(--border);
         }
 
+        /* Cada botão ocupa espaço igual */
         nav button {
+            flex: 1;
+            
             border: none;
-            border-radius: 20px;
+            border-radius: 15px;
             background: none;
-            padding: 10px 15px;
+            
+            padding: 6px 4px;
 
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
 
-            font-size: 15px;
-            gap: 5px;
+            font-size: clamp(11px, 2.5vw, 14px);
+            gap: 4px;
 
             color: var(--muted-foreground);
         }
 
+        /* Ícones responsivos */
         nav button svg {
-            width: 25px;
+            width: clamp(20px, 5vw, 24px);
+            height: auto;
         }
 
+        /* Estados */
         nav button:focus {
             color: var(--primary);
             background-color: rgb(255, 221, 211);
@@ -76,6 +85,7 @@
 </body>
 
 </html>
+
 
 
 
