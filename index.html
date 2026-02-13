@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app/styles/global.css">
+    <link rel="stylesheet" href="app/styles/vendor/reset.css">
+    <title>Sabores da Serra</title>
+</head>
+<body>
+    <style>
+        body {
+            min-height: 100dvh;
+            font-family: "Inter", sans-serif;
+            background-color: var(--background);
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* PARTE SUPERIOR LARANJA */
+
+        .top-background {
+            background-color: var(--primary);
+            height: 35vh;
+            width: 100%;
+            position: relative;
+        }
+
+        /* CÍRCULO CENTRAL */
+
+        .logo-container {
+            position: absolute;
+            top: 18vh;
+            left: 50%;
+            transform: translateX(-50%);
+            
+            width: clamp(220px, 65vw, 320px);
+            height: clamp(220px, 65vw, 320px);
+            
+            border-radius: 50%;
+            border: 2px solid var(--primary);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* CONTEÚDO */
+
+        .content {
+            margin-top: clamp(160px, 30vh, 260px);
+            padding: 0 24px;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: clamp(22px, 6vw, 28px);
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .content p {
+            font-size: clamp(14px, 4vw, 16px);
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* BOTÕES */
+
+        .buttons {
+            margin-top: auto;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding-bottom: calc(24px + env(safe-area-inset-bottom));
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 16px;
+            border-radius: 16px;
+            border: none;
+            background-color: var(--primary);
+            color: white;
+            font-size: clamp(15px, 4vw, 18px);
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary:active {
+            transform: scale(0.97);
+        }
+
+        .btn-outline {
+            width: 100%;
+            padding: 16px;
+            border-radius: 16px;
+            border: 2px solid var(--primary);
+            background-color: transparent;
+            color: var(--primary);
+            font-size: clamp(15px, 4vw, 18px);
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .btn-outline:active {
+            transform: scale(0.97);
+            background-color: rgba(199, 54, 18, 0.08);
+        }
+    </style>
+
+        <div class="top-background"></div>
+
+        <div class="logo-container">
+            <img src="app/assets/imgs/IMG-20260118-WA0085-photoaidcom-cropped.png" alt="Sabores da Serra">
+        </div>
+
+        <div class="content">
+            <h1>Bem vindo(a) ao seu<br>Passaporte Gastronômico.</h1>
+            <p>
+                Um espaço para registrar sabores, explorar culturas
+                e transformar cada refeição em uma experiência.
+            </p>
+        </div>
+
+        <div class="buttons">
+            <button class="btn-primary" onclick="window.location.href='cadastro.html'">
+                Criar uma conta
+            </button>
+
+            <button class="btn-outline" onclick="window.location.href='login.html'">
+                Entrar na minha conta
+            </button>
+        </div>
+</body>
+</html>
