@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app/styles/global.css">
+    <link rel="stylesheet" href="app/styles/vendor/reset.css">
+    <title>onboarding</title>
+</head>
+<body>
+    <style>
+
+        body {
+            min-height: 100dvh;
+            background-color: var(--background);
+            font-family: "Inter", sans-serif;
+            display: flex;
+            flex-direction: column;
+            padding: 24px;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .header h1 {
+            font-size: clamp(22px, 6vw, 30px);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        /* IMAGEM */
+        .illustration {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .illustration img {
+            width: clamp(200px, 70vw, 350px);
+            height: auto;
+        }
+
+        /* TEXTO */
+        .content {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .content h2 {
+            font-size: clamp(18px, 5vw, 22px);
+            margin-bottom: 10px;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .content p {
+            font-size: clamp(14px, 4vw, 16px);
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        /* BOTÕES */
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            background-color: var(--primary);
+            color: white;
+            font-size: clamp(14px, 4vw, 16px);
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .btn-primary:active {
+            transform: scale(0.98);
+            background-color: var(--primary-dark);
+        }
+
+        .btn-outline {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1.5px solid var(--primary);
+            background-color: transparent;
+            color: var(--primary);
+            font-size: clamp(14px, 4vw, 16px);
+            font-weight: 500;
+            cursor: pointer;
+            transition: 0.2s ease;
+        }
+
+        .btn-outline:active {
+            transform: scale(0.98);
+            background-color: rgba(30, 115, 232, 0.08);
+        }
+
+        /* SAFE AREA (iPhone notch) */
+        body {
+            padding-bottom: calc(24px + env(safe-area-inset-bottom));
+        }
+    </style>
+
+        <div class="header">
+            <h1>Passaporte Gastrônomico</h1>
+        </div>
+
+        <div class="illustration">
+            <!-- Substitua pela sua imagem -->
+            <img src="app/assets/imgs/undraw_breakfast_rgx5.svg" alt="Ilustração">
+        </div>
+
+        <div class="content">
+            <h2>Bem-vinda(o) ao seu Passaporte Gastronômico.</h2>
+            <p>Um espaço para registrar sabores, explorar culturas e transformar cada refeição em uma experiência.</p>
+        </div>
+
+        <div class="buttons">
+            <button class="btn-primary" onclick="window.location.href='cadastro.html'">
+                Criar uma conta
+            </button>
+
+            <button class="btn-outline" onclick="window.location.href='login.html'">
+                Entrar na minha conta
+            </button>
+        </div>
+</body>
+</html>
